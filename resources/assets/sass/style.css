@@ -1,4 +1,39 @@
-body {
-  background-color: #eee; }
+/*
+Error: The line was indented 2 levels deeper than the previous line.
+        on line 96 of style.sass
 
-/*# sourceMappingURL=style.css.map */
+91:     text-align: center
+92:   .vc_sep_holder .vc_sep_line
+93:     border-top-width: 2px
+94: 
+95: .vc_sep_holder
+96:     display: table-cell
+97:     height: 1px
+98:     position: relative
+99:     vertical-align: middle
+100:     width: 50%
+101:     .vc_sep_line
+
+Backtrace:
+style.sass:96
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:521:in `tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:406:in `_to_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/plugin.rb:82:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/exec/sass_scss.rb:364:in `watch_or_update'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.4.15/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: The line was indented 2 levels deeper than the previous line.\A         on line 96 of style.sass\A \A 91:     text-align: center\A 92:   .vc_sep_holder .vc_sep_line\A 93:     border-top-width: 2px\A 94: \A 95: .vc_sep_holder\A 96:     display: table-cell\A 97:     height: 1px\A 98:     position: relative\A 99:     vertical-align: middle\A 100:     width: 50%\A 101:     .vc_sep_line"; }

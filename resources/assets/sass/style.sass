@@ -1,2 +1,270 @@
 body
   background-color: #eee
+  font-size: 15px
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif
+
+.main
+  margin: 0 auto
+  max-width: 1200px
+  background: 0 0
+  padding-bottom: 0
+a
+  color: #222
+#top-nav
+  background: #fff
+  .row
+    margin-bottom: 0
+
+.tl-header
+  display: table
+  width: 100%
+  padding: 30px 0
+  .logo
+    white-space: nowrap
+    padding-right: 20px
+    h1
+      margin: 0
+      padding: 0
+  .top-menu
+    padding-right: 80px
+    li
+      display: inline-block
+      position: relative
+      padding: 0 5px
+      margin: 0
+      a
+        color: #999
+        padding: 0 10px
+        -moz-transition: all 300ms ease-in-out
+        -o-transition: all 300ms ease-in-out
+        -webkit-transition: all 300ms ease-in-out
+        transition: all 300ms ease-in-out
+    ul
+      margin: 0
+      padding: 0
+      float: right
+  .logo, .top-menu
+    display: table-cell
+    vertical-align: middle
+.cart-ribbon
+  width: 66px
+  margin-top: 0
+  position: absolute
+  right: 13px
+  top: 0
+  z-index: 100
+  padding-top: 0
+  a
+    padding: 0
+    position: absolute
+    z-index: 9999
+    color: #fff
+    .bucket_bottom
+      background: url(http://demo.oxygentheme.com/wp-content/themes/oxygen/assets/images/bucket_bottom.png) bottom center no-repeat
+      height: 11px
+      width: 100%
+      -webkit-background-size: 100%
+      -moz-background-size: 100%
+      background-size: 100%
+      content: ""
+      display: block
+      clear: both
+  .cart_content
+    display: block
+    background: #222
+    padding: 20px 20px 15px
+    float: left
+    width: 100%
+    text-align: center
+    -moz-transition: padding .15s
+    -o-transition: padding .15s
+    -webkit-transition: padding .15s
+    transition: padding .15s
+    position: relative
+    span.number
+      font-size: 20px
+      position: relative
+      top: 5px
+    span.bucket
+      background: url(http://demo.oxygentheme.com/wp-content/themes/oxygen/assets/images/cart-icon-1.png) top center no-repeat #222
+      -webkit-background-size: 24px
+      -moz-background-size: 24px
+      background-size: 24px
+      width: 24px
+      height: 24px
+      display: block
+      -ms-transform-origin: bottom center
+      -o-transform-origin: bottom center
+      -webkit-transform-origin: bottom center
+      -moz-transform-origin: bottom center
+      transform-origin: bottom center
+
+#sec-nav
+  background: #fff
+  .main
+    border-top: 1px solid #ddd
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      float: left
+    li
+      margin: 0 20px 0 0
+      padding: 0
+      display: block
+      float: left
+      position: relative
+      overflow: hidden
+    li a
+      text-transform: uppercase
+      position: relative
+      padding: 15px 10px
+      font-size: 102%
+      line-height: 20.4px
+      display: block
+      a:before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        right: 28px
+        bottom: 10px
+        height: 1px
+        background: #aeaeae
+        visibility: hidden
+        zoom: 1
+        -webkit-opacity: 0
+        -moz-opacity: 0
+        opacity: 0
+        filter: alpha(opacity=0)
+        -moz-transition: all 180ms ease-in-out
+        -o-transition: all 180ms ease-in-out
+        -webkit-transition: all 180ms ease-in-out
+        transition: all 180ms ease-in-out
+      &:first-child
+        padding-left: 0
+
+.main .row
+  margin-left: 0
+  margin-right: 0
+  margin-bottom: 30px
+
+#full-slider
+  margin: 20px auto
+.divider
+  border-bottom: 2px solid #eee
+  height: 20px
+  list-style: none outside none
+  width: 100%
+  clear: both
+.white-block
+  background: #FFF
+
+.col-md-img
+  overflow: hidden
+.vc_separator
+  display: table
+  .double-bordered-thick h4
+    padding: 0 20px!important
+    font-size: 177%
+    text-align: center
+  .vc_sep_holder .vc_sep_line
+    border-top-width: 2px
+
+.vc_sep_holder
+    display: table-cell
+    height: 1px
+    position: relative
+    vertical-align: middle
+    width: 50%
+    .vc_sep_line
+      height: 1px
+      border-top: 1px solid #ebebeb
+      display: block
+      position: relative
+      top: 1px
+      width: 100%
+      &:after
+        display: block
+        content: ''
+        margin-top: 2px
+        height: 1px
+        border-top: 1px solid inherit
+
+.owl-item
+  width: 293px
+
+.banner
+  padding: 15px
+  background: #FFF
+  .button_outer
+    border: 1px solid #CCC
+    .button_inner
+      padding: 20px 40px
+.item
+  .description
+    padding: 20px
+    .title
+      margin-bottom: 5px
+      font-size: 16px
+    .type
+      color: #ccc
+      font-size: 12px
+    .divider
+      margin-bottom: 20px
+    .price
+      color: #dd1f26
+      font-size: 17px
+  .sale_tag
+    position: absolute
+    z-index: 3
+    .ribbon
+      position: absolute
+      display: block
+      text-align: center
+      background: #dd1f26
+      padding: 30px 0
+      width: 35px
+      top: -10px
+      left: 10px
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        bottom: -1em
+        z-index: -1
+      span
+        display: block
+        font-size: 16px
+        color: #fff
+        margin: 0
+        padding: 0
+        font-weight: 400
+        white-space: nowrap
+        -webkit-transform: rotate(-90deg)
+        -moz-transform: rotate(-90deg)
+        -ms-transform: rotate(-90deg)
+        -o-transform: rotate(-90deg)
+        transform: rotate(-90deg)
+      .ribbon-content:after
+        position: absolute
+        right: -5px
+        top: 0
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 10px 0 0 5px
+        border-color: transparent transparent transparent #ac1a20;
+        display: block
+        content: ''
+footer
+  margin-bottom: 50px
+
+
+/* PRODUCT ITEM */
+.product-single
+  background: #FFF
+  margin-left: 0
+  margin-right: 0
+  padding: 38px 15px 30px
+  border-left: 1px solid #eee
