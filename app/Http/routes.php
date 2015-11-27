@@ -29,9 +29,10 @@ Route::bind('categories', function($value) {
 Route::resource('categories', 'CategoryController');
 Route::resource('categories.products', 'ProductController');
 
+Route::bind('order','App\Order');
+Route::resource('order', 'OrderController');
+
 Route::get('/products', 'ProductController@index', ["as" => 'products.index']);
-//Route::get('/product/create', 'ProductController@create');
-//Route::post('/product/store', 'ProductController@store');
 
 
 Route::controllers([

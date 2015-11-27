@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\Products;
+use Illuminate\Support\Facades\Cache;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,7 +33,15 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('index');
+		if (Cache::has('products:all'))
+		{
+			$products = Cache::get('products:all');
+		}else{
+			$products = Products::all();
+			Cache::put('products:all',$products,15);
+		}
+
+		return view('index', compact("products"));
 	}
 
 	public function item()

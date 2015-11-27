@@ -15,8 +15,8 @@
     {!! Form::textarea('desc', null, ['placeholder'=>'Коротко о товаре', 'class'=>'form-control']) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('photos', 'Фотографии') !!}
-    {!! Form::file('photos') !!}
+    {!! Form::label('images[]', 'Фотографии') !!}
+    {!! Form::file('images[]',["multiple"=>""]) !!}
 </div>
 <div class="checkbox">
     {!! Form::checkbox('status', null) !!}

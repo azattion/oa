@@ -60,8 +60,8 @@
 <div class="container">
     <div class="row">
         @if (count($errors) > 0)
-            <div class="alert alert-danger" ng-init="alert=1" ng-show="alert">
-                <button type="button" class="close" ng-click="alert=0" data-dismiss="alert"
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert"
                         aria-hidden="true">&times;</button>
                 При обработке данных произашла ошибка<br><br>
                 <ul>
@@ -73,7 +73,9 @@
         @endif
 
         @if (Session::has('message'))
-            <div class="flash alert-info">
+            <div class="alert alert-info">
+                <button type="button" class="close" data-dismiss="alert"
+                        aria-hidden="true">&times;</button>
                 <p>{{ Session::get('message') }}</p>
             </div>
         @endif
