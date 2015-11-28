@@ -12,29 +12,26 @@
 */
 
 Route::get('/home', 'HomeController@index');
-
 Route::get('/', 'WelcomeController@index');
 Route::get('/item', 'WelcomeController@item');
 
+/** Category - Products */
 Route::model('categories', 'Category');
 Route::model('products', 'Products');
-
-Route::bind('products', function($value) {
-	return App\Products::where("slug",$value)->first();
-});
-Route::bind('categories', function($value) {
-	return App\Category::where("slug",$value)->first();
-});
-
+Route::bind('products', function($value) {return App\Products::where("slug",$value)->first();});
+Route::bind('categories', function($value) {return App\Category::where("slug",$value)->first();});
 Route::resource('categories', 'CategoryController');
 Route::resource('categories.products', 'ProductController');
+Route::get('/products', 'ProductController@index', ["as" => 'products.index']);
 
+/** Order */
 Route::model('order','App\Order');
 Route::resource('order', 'OrderController');
 
-Route::get('/products', 'ProductController@index', ["as" => 'products.index']);
+/** Cart */
+Route::controller('cart', 'CartController');
 
-
+/** Auth */
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
