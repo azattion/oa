@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         DB::table('products')->delete();
 
         // $this->call('UserTableSeeder');
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             \App\Products::create(
                 [
                     'name' => 'Item ' . $i,

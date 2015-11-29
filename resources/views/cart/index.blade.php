@@ -3,7 +3,6 @@
 @section('content')
     <div class="container">
         @if(count($cart))
-            {!! Form::open(['method' => 'PATCH', 'url' => '/cart/store']) !!}
             <table class="table">
                 <thead>
                 <tr>
@@ -20,21 +19,27 @@
                 @foreach($cart as $one)
                     <tr>
                         <td>{{{$i}}}</td>
-                        <td>{{{$one[0]["name"]}}}</td>
-                        <td>{{{$one[0]["amount"]}}}</td>
+                        <td>{{{$one["name"]}}}</td>
+                        <td>{{{$one["amount"]}}}</td>
                         <td>
-                            <div class="col-md-6">
-                                {!! Form::hidden('id[]', $one[0]["id"]) !!}
-                                {!! Form::text('count[]', $one[0]["count"], ['placeholder'=>'Количество',
-                                'class'=>'form-control']) !!}
+                            <div class="">
+                                <div class="form-group">
+                                    {!! Form::open(['name'=>'item'.$one["pid"],'method' => 'post',
+                                    'class'=>'form-inline', 'url' => '/cart/update']) !!}
+                                        {!! Form::hidden('pid', $one["pid"]) !!}
+                                        {!! Form::text('count', $one["count"], ['placeholder'=>'Количество',
+                                    'class'=>'form-control']) !!}
+                                        {!! Form::submit('Обновить', ['class'=>'btn btn-link']) !!}
+                                    {!! Form::close() !!}
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <? $i++; $count += $one[0]["amount"] * $one[0]["count"]; ?>
-                            {{{$one[0]["amount"]*$one[0]["count"]}}} сом.
+                            <? $i++; $count += $one["amount"] * $one["count"]; ?>
+                            {{{$one["amount"]*$one["count"]}}} сом.
                         </td>
                         <td>
-                            <a href="/cart/destroy/{{{$one[0]["id"]}}}/">Удалить</a>
+                            <a href="/cart/destroy/{{{$one["pid"]}}}/">Удалить</a>
                         </td>
                     </tr>
                 @endforeach
@@ -47,8 +52,8 @@
                 </tr>
                 </tbody>
             </table>
-            {!! Form::submit('Оформить заказ', ['class'=>'btn primary']) !!}
-            <a href="/" class='btn primary'>Посмотреть еще товары</a>
+            <a href="/order/create" class='btn btn-primary'>Оформить заказ</a>
+            <a href="/" class='btn btn-primary'>Посмотреть еще товары</a>
             {!! Form::close() !!}
         @else
             <div>Корзина пустая</div>
