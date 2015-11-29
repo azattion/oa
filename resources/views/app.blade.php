@@ -37,7 +37,7 @@
                 <li><a href="/">Главная</a></li>
                 <li><a href="{{{route('categories.index')}}}">Категории</a></li>
                 <li><a href="/product">Продукты</a></li>
-                <li><a href="/orders">Заказы</a></li>
+                <li><a href="{{{route('order.index')}}}">Заказы</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

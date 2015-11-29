@@ -14,6 +14,7 @@
 
         <div class="white-block description">
             <h4 class="title">
+                {{--<a href="{{{route('categories.products.show', [$category->slug, $one["slug"]])}}}">{{{$one["name"]}}}</a>--}}
                 <a href="/">{{{$one["name"]}}}</a>
             </h4>
 						<span class="type">

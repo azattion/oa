@@ -6,8 +6,8 @@
     </h2>
 
     <p><strong>Адрес:</strong> {{ $order->address }}</p>
-    <p><strong>тел.:</strong> {{ $order->phone }}</p>
-    <p><strong>э-почта.:</strong> {{ $order->email }}</p>
+    <p><strong>Тел.:</strong> {{ $order->phone }}</p>
+    <p><strong>Э-почта.:</strong> {{ $order->email }}</p>
     <p><strong>Описание:</strong> {{ $order->desc }}</p>
     <p><strong>Дата:</strong> {{ $order->created_at }}</p>
     <p><strong>Статус:</strong>  {{{($order->status==0)?"В ожидание":"Принят"}}}</p>

@@ -46,63 +46,8 @@
 
                 <div class="row">
                     @foreach($products as $one)
-                        <div class="col-md-3 item">
-                            <div class="image full-gallery">
-                                <a href="/product/{{{$one["slug"]}}}" class="thumb">
-                                    <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/396808-0001_1-325x390.jpeg"
-                                         class="attachment-shop-thumb-1 wp-post-image" alt="396808-0001_1"> </a>
-
-                                <div class="white-block description">
-                                    <h4 class="title">
-                                        <a href="/">{{{$one["name"]}}}</a>
-                                    </h4>
-						            <span class="type">
-				                        <a href="/product/women/blouses/" rel="tag">Blouses</a>
-                                    </span>
-                                    <div class="divider"></div>
-                                    <span class="price"><span class="amount">$&nbsp;{{{$one["amount"]}}}</span></span>
-                                </div>
-                            </div>
-                        </div>
+                        @include('products.row', $one)
                     @endforeach
-                    <div class="col-md-3 item">
-                        <div class="sale_tag">
-                            <div class="ribbon">
-                                <strong class="ribbon-content">
-                                    <span>Sale</span>
-                                </strong>
-                            </div>
-                        </div>
-                        <div class="image full-gallery">
-
-                            <a href="/item" class="thumb">
-                                <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/396808-0001_1-325x390.jpeg"
-                                     class="attachment-shop-thumb-1 wp-post-image" alt="396808-0001_1"> </a>
-
-                            <div class="white-block description">
-                                <h4 class="title">
-                                    <a href="/">Lace Shirt</a>
-                                </h4>
-						<span class="type">
-				<a href="http://demo.oxygentheme.com/product-category/women/blouses/" rel="tag">Blouses</a>			</span>
-
-                                <div class="divider"></div>
-                                <span class="price"><span class="amount">$&nbsp;11.95</span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
                 </div>
 
                 <div class="row">
@@ -120,22 +65,9 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
+                    @foreach($products as $one)
+                        @include('products.row', $one)
+                    @endforeach
                 </div>
 
                 <div class="row">
@@ -164,22 +96,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="http://demo.oxygentheme.com/wp-content/uploads/2014/05/800508-0083_1-325x390.jpeg"
-                             class="attachment-shop-thumb-1 wp-post-image" alt="800508-0083_1">
-                    </div>
+                    @foreach($products as $one)
+                        @include('products.row', $one)
+                    @endforeach
                 </div>
 
             </div>
