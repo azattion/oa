@@ -31,6 +31,9 @@ Route::resource('order', 'OrderController');
 /** Cart */
 Route::controller('cart', 'CartController');
 
+/** Profile */
+Route::controller('account', 'AccountController');
+
 /** Auth */
 Route::controllers([
 	'auth' => 'Auth\AuthController',

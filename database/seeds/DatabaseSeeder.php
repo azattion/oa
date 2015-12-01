@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        DB::table('products')->delete();
+        //DB::table('products')->delete();
 
         // $this->call('UserTableSeeder');
         for ($i = 1; $i <= 10; $i++) {
@@ -23,21 +23,21 @@ class DatabaseSeeder extends Seeder
                 [
                     'name' => 'Item ' . $i,
                     'slug' => 'item-' . $i,
-                    'cat_id' => 1,
+                    'cat_id' => 3,
                     'amount' => 2 * $i,
                     'desc' => 'Test test test'
                 ]
             );
         }
         \App\Category::create(
-            [
-                'name' => 'Обувь',
-                'slug' => 'obuv'
-            ],
-            [
-                'name' => 'Куртки',
-                'slug' => 'curtki'
-            ],
+//            [
+//                'name' => 'Обувь',
+//                'slug' => 'obuv'
+//            ],
+//            [
+//                'name' => 'Куртки',
+//                'slug' => 'curtki'
+//            ],
             [
                 'name' => 'Рубашки',
                 'slug' => 'rubashki'
